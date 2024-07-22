@@ -1,0 +1,15 @@
+C:\Projects\csharp\WeatherClock\WeatherClock\bin\Release\WeatherClock.exe.config
+C:\Projects\csharp\WeatherClock\WeatherClock\bin\Release\WeatherClock.exe
+C:\Projects\csharp\WeatherClock\WeatherClock\bin\Release\WeatherClock.pdb
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\MainWindow.g.cs
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\App.g.cs
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock_MarkupCompile.cache
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock_MarkupCompile.lref
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\MainWindow.baml
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock.g.resources
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock.Properties.Resources.resources
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock.csproj.GenerateResource.cache
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock.csproj.CoreCompileInputs.cache
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock.exe
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock.pdb
+C:\Projects\csharp\WeatherClock\WeatherClock\obj\Release\WeatherClock.csprojAssemblyReference.cache
