@@ -22,7 +22,7 @@
         </ContextMenu>
     </Window.ContextMenu>
     <Grid>
-        
+        <local:UserControl1></local:UserControl1>
         <Label HorizontalAlignment="Center" VerticalAlignment="Top" Name="Clock1" FontFamily="Verdana" FontSize="72" FontWeight="Bold">12:00</Label>
         <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="Temperature" FontFamily="Verdana" FontSize="72">-0 °C</Label>
     </Grid>

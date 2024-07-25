@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="WeatherClock.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WeatherClock"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" Width="400">
+    <Grid>
+        <MediaElement Name="GifPlayer" 
+                      LoadedBehavior="Play" 
+                      Source="C:/Users/lysenkooe/Downloads/back.gif" 
+                      Stretch="Fill" 
+                      IsMuted="True"/>
+    </Grid>
+</UserControl>

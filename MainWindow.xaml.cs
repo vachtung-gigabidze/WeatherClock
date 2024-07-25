@@ -45,6 +45,11 @@ namespace WeatherClock
             sqlSelect();
         }
 
+        private void dispatcherTimerPaint_Tick(object sender, EventArgs e)
+        {
+            Clock1.Content = DateTime.Now.ToLongTimeString();
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Get the window that contains the button.
