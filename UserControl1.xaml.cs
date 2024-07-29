@@ -23,5 +23,15 @@ namespace WeatherClock
         {
             InitializeComponent();
         }
+        private void GifPlayer_Loaded(object sender, RoutedEventArgs e)
+        {
+            GifPlayer.Play();
+        }
+
+        private void GifPlayer_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            GifPlayer.Position = TimeSpan.Zero;
+            GifPlayer.Play();
+        }
     }
 }

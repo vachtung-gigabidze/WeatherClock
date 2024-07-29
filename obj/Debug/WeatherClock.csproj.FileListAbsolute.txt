@@ -16,7 +16,6 @@ C:\Projects\csharp\WeatherClock\WeatherClock\bin\Debug\WeatherClock.exe.config
 C:\Users\lysenkooe\source\repos\WeatherClock\bin\Debug\WeatherClock.exe.config
 C:\Users\lysenkooe\source\repos\WeatherClock\bin\Debug\WeatherClock.exe
 C:\Users\lysenkooe\source\repos\WeatherClock\bin\Debug\WeatherClock.pdb
-C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\WeatherClock.csproj.AssemblyReference.cache
 C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\MainWindow.g.cs
 C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\UserControl1.g.cs
 C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\App.g.cs

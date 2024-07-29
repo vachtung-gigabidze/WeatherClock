@@ -18,12 +18,18 @@
             <MenuItem Header="Закрыть"   
                               Click="Button_Click"  
                               />
-            
+
         </ContextMenu>
     </Window.ContextMenu>
     <Grid>
-        <local:UserControl1></local:UserControl1>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Name="Clock1" FontFamily="Verdana" FontSize="72" FontWeight="Bold">12:00</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="Temperature" FontFamily="Verdana" FontSize="72">-0 °C</Label>
+        <local:UserControl1/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Name="Clock1" FontFamily="Verdana" FontSize="72" FontWeight="Bold" Margin="10,10,10,0" Width="380" Background="{x:Null}" Foreground="#FF344A59">12:00
+        </Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="Temperature" FontFamily="Verdana" FontSize="72" Margin="109.166,0,87.834,25.386" Foreground="#FF344A59">-0 °C
+        </Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Name="DayOfWeek" FontFamily="Verdana" FontSize="30" Margin="88.332,-13.055,87.834,167.055" Width="223.834" Foreground="#FF344A59" Background="{x:Null}">Monday
+        </Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Name="dataTime" FontFamily="Verdana" FontSize="30" Margin="88.332,154,87.834,0" Width="223.834" Background="{x:Null}" Foreground="#FF344A59">dd.dd.dddd
+        </Label>
     </Grid>
 </Window>
