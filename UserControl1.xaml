@@ -10,7 +10,7 @@
         <MediaElement Name="GifPlayer" 
                       LoadedBehavior="Manual" 
                       UnloadedBehavior="Stop"
-                      Source="C:/Users/lysenkooe/Downloads/air.mp4" 
+                      Source="WeatherClock/image/air.mp4" 
                       Stretch="Fill" 
                       IsMuted="True"
                       MediaEnded="GifPlayer_MediaEnded"

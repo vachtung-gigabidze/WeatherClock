@@ -30,3 +30,4 @@ C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\WeatherClock.csproj.Gener
 C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\WeatherClock.csproj.CoreCompileInputs.cache
 C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\WeatherClock.exe
 C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\WeatherClock.pdb
+C:\Users\lysenkooe\source\repos\WeatherClock\obj\Debug\WeatherClock.csproj.AssemblyReference.cache
