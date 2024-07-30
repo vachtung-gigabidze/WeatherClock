@@ -10,7 +10,7 @@
         Left="-1"
         Title="MainWindow" Height="200" Width="400" AllowsTransparency="True" WindowStyle="None" Topmost="True" >
     <Window.Background>
-        <SolidColorBrush Opacity="0.8" Color="AliceBlue"/>
+        <SolidColorBrush Opacity="0.0"/>
     </Window.Background>
     <Window.ContextMenu>
         <ContextMenu BorderBrush="Black" BorderThickness="1">
@@ -18,12 +18,25 @@
             <MenuItem Header="Закрыть"   
                               Click="Button_Click"  
                               />
-            
+
         </ContextMenu>
     </Window.ContextMenu>
     <Grid>
-        
-        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Name="Clock1" FontFamily="Verdana" FontSize="72" FontWeight="Bold">12:00</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="Temperature" FontFamily="Verdana" FontSize="72">-0 °C</Label>
+        <local:UserControl1 x:Name="userControl1"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Name="Clock1" FontFamily="Verdana" FontSize="72" FontWeight="Bold" Margin="20,10,0,0" Width="380" Background="{x:Null}" Foreground="#FF232323">12:00
+        </Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="Temperature" FontFamily="Verdana" FontSize="72" Margin="109.166,0,87.834,25.386" Foreground="#FF232323">-0 °C
+        </Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Name="DayOfWeek" FontFamily="Verdana" FontSize="30" Margin="109.166,-11.723,67,165.722" Width="223.834" Background="{x:Null}" Foreground="#FF171717">Monday
+        </Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Name="dataTime" FontFamily="Verdana" FontSize="30" Margin="103.166,154,73,0" Width="223.834" Background="{x:Null}" Foreground="#FF232323">dd.dd.dddd
+        </Label>
+
+        <Button Content="off back" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Bottom" 
+                Margin="10"
+                Click="ToggleBackground_Click" Foreground="#FF232323" />
+
     </Grid>
 </Window>
