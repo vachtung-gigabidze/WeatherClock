@@ -23,6 +23,8 @@ namespace WeatherClock
         {
             InitializeComponent();
         }
+
+        //----------------------------------------------------------------------------|цикл видео (репит)
         private void GifPlayer_Loaded(object sender, RoutedEventArgs e)
         {
             GifPlayer.Play();
@@ -33,5 +35,27 @@ namespace WeatherClock
             GifPlayer.Position = TimeSpan.Zero;
             GifPlayer.Play();
         }
+        //----------------------------------------------------------------------------|
+
+        //----------------------------------------------------------------------------|Вкыл-выкл фона
+        public void ToggleBackground(bool playVideo)
+        {
+            if (playVideo)
+            {
+                GifPlayer.Visibility = Visibility.Visible;
+                GifPlayer.Play();
+            }
+            else
+            {
+                GifPlayer.Visibility = Visibility.Collapsed;
+                GifPlayer.Stop();
+            }
+        }
+
+        public void SetVideoOpacity(double opacity)
+        {
+            GifPlayer.Opacity = opacity;
+        }
+        //----------------------------------------------------------------------------|
     }
 }

@@ -10,11 +10,13 @@
         <MediaElement Name="GifPlayer" 
                       LoadedBehavior="Manual" 
                       UnloadedBehavior="Stop"
-                      Source="WeatherClock/image/air.mp4" 
+                      Source="image/air.mp4" 
                       Stretch="Fill" 
                       IsMuted="True"
                       MediaEnded="GifPlayer_MediaEnded"
-                      Loaded="GifPlayer_Loaded">
+                      Loaded="GifPlayer_Loaded"
+                      Opacity="0.7">
+            <!--Source="C:/Users/lysenkooe/Downloads/air.mp4"-->
             <MediaElement.Effect>
                 <BlurEffect Radius="2"/>
             </MediaElement.Effect>

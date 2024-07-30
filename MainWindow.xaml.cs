@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Data.SqlClient;
 
 
@@ -12,6 +13,7 @@ namespace WeatherClock
     public partial class MainWindow : Window
     {
 
+        private bool isBackgroundVideo = true; // Поле для отслеживания состояния фона
         String temperature = "";
 
 
@@ -33,34 +35,19 @@ namespace WeatherClock
             dispatcherTimer1.Interval = new TimeSpan(0, 5, 0);
             dispatcherTimer1.Start();
 
+            //обновление дня недели,месяц,год раз в день
             System.Windows.Threading.DispatcherTimer dispatcherTimer2 = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(dispatcherTimerDateTime_Tick);
             dispatcherTimer1.Interval = new TimeSpan(24, 0, 0);
             dispatcherTimer1.Start();
 
+            //отслеживание перемещение активного окна
             this.MouseDown += new MouseButtonEventHandler(MainWindow_MouseDown);
         }
 
-        //private void dispatcherTimer_Tick(object sender, EventArgs e)
-        //{
-        //    Clock1.Content = DateTime.Now.ToLongTimeString();
-        //}
-
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
-            string dayOfWeek = now.ToString("dddd"); // Получаем день недели
-            string time = now.ToLongTimeString();
-            Clock1.Content = time;
-            DayOfWeek.Content = dayOfWeek; // Обновляем день недели
-            dataTime.Content = now.ToString("d MMMM yyyy");
-        }
-
-        private void dispatcherTimerDateTime_Tick(object sender, EventArgs e)
-        {
-            DateTime now = DateTime.Now;
-            string dateTime = now.ToString("d MMMM yyyy");
-            dataTime.Content = dateTime;
+            Clock1.Content = DateTime.Now.ToLongTimeString();
         }
 
         private void dispatcherTimer1_Tick(object sender, EventArgs e)
@@ -68,10 +55,14 @@ namespace WeatherClock
             sqlSelect();
         }
 
-        private void dispatcherTimerPaint_Tick(object sender, EventArgs e)
+        //обновление через 24 часа
+        private void dispatcherTimerDateTime_Tick(object sender, EventArgs e)
         {
-            Clock1.Content = DateTime.Now.ToLongTimeString();
+            DateTime now = DateTime.Now;
+            DayOfWeek.Content = now.ToString("dddd");
+            dataTime.Content = now.ToString("d MMMM yyyy");
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -82,19 +73,32 @@ namespace WeatherClock
             window.Close();
         }
 
+        //отслеживание триггера на движение активного окна
         private void MainWindow_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
 
-
-        //private void GifPlayer_MediaEnded(object sender, RoutedEventArgs e)
-        //{
-        //    GifPlayer.Position = TimeSpan.Zero;
-        //    GifPlayer.Play();
-        //}
-
+        //Вкыл-выкл фона
+        private void ToggleBackground_Click(object sender, RoutedEventArgs e)
+        {
+            if (userControl1 != null)
+            {
+                if (isBackgroundVideo)
+                {
+                    userControl1.ToggleBackground(false); 
+                    this.Background = new SolidColorBrush(Color.FromArgb(128, 255, 255, 255));
+                    isBackgroundVideo = false;
+                }
+                else
+                {
+                    userControl1.ToggleBackground(true);
+                    this.Background = new SolidColorBrush(Color.FromArgb(7, 255, 255, 255));
+                    isBackgroundVideo = true;
+                }
+            }
+        }
 
         private void sqlSelect() {
             using (SqlConnection conn = new SqlConnection("Password=passWeatherDaemonAero;Persist Security Info=True;User ID=WeatherDaemonAero;Initial Catalog=WebInstanceNVAero;Data Source=APPAERO")) 
